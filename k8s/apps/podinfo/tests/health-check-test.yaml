@@ -1,0 +1,11 @@
+apiVersion: testworkflows.testkube.io/v1
+kind: TestWorkflow
+metadata:
+  name: podinfo-health-check-test
+  namespace: testkube
+spec:
+  steps:
+    - run:
+        image: "curlimages/curl:7.78.0"
+        args:
+          - http://podinfo.podinfo.svc.cluster.local:9898/healthz

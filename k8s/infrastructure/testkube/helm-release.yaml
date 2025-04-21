@@ -1,0 +1,14 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: testkube
+  namespace: testkube
+spec:
+  chart:
+    spec:
+      chart: testkube
+      sourceRef:
+        kind: HelmRepository
+        name: kubeshop
+  interval: 10m0s
