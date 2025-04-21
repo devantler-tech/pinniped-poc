@@ -1,0 +1,13 @@
+apiVersion: idp.supervisor.pinniped.dev/v1alpha1
+kind: GitHubIdentityProvider
+metadata:
+  name: github-provider
+  namespace: pinniped
+spec:
+  client:
+    secretName: github-provider-client-secret
+  allowAuthentication:
+    organizations:
+      policy: AllGitHubUsers
+  claims:
+    username: login

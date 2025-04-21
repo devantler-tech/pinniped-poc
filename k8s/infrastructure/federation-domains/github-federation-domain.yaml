@@ -1,0 +1,18 @@
+apiVersion: config.supervisor.pinniped.dev/v1alpha1
+kind: FederationDomain
+metadata:
+  name: github-federation-domain
+  namespace: pinniped
+spec:
+  # You can choose an arbitrary path for the issuer URL.
+  issuer: "https://pinniped-supervisor.pinniped.svc.cluster.local/demo-issuer"
+  tls:
+    # The name of the secretName from the cert-manager Certificate
+    # resource above.
+    secretName: pinniped-supervisor-tls
+  identityProviders:
+    - displayName: GitHub.com
+      objectRef:
+        apiGroup: idp.supervisor.pinniped.dev
+        kind: GitHubIdentityProvider
+        name: github-provider

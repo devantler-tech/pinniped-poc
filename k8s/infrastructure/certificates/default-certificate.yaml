@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: default-certificate
+  namespace: traefik
+spec:
+  secretName: default-certificate-tls
+  dnsNames:
+    - svc.cluster.local
+    - "*.svc.cluster.local"
+  issuerRef:
+    name: selfsigned-cluster-issuer
+    kind: ClusterIssuer
