@@ -1,7 +1,7 @@
 # Pinniped PoC
 
 > [!NOTE]
-> The PoC is built on [the tutorial from the Pinniped project](https://pinniped.dev/docs/tutorials/local-concierge-and-supervisor-demo/), but with tools that are more familiar to us. For example using:
+> The PoC is built on [the tutorial from the Pinniped project](https://pinniped.dev/docs/tutorials/local-concierge-and-supervisor-demo/).
 
 This is a PoC to test the Pinniped project, and how it fits in a multi-cluster setup.
 
